@@ -21,15 +21,24 @@ the key and uses a server library:
 
 ## Install
 
-1. Download [`secondfactor/SecondFactor.kt`](secondfactor/SecondFactor.kt)
-   from the release you want (the version is in the file's header).
-2. Put it anywhere in your app module's source tree, for example
-   `app/src/main/java/ai/secondfactor/SecondFactor.kt`. Keep the package
-   `ai.secondfactor`, so that updating means replacing the file.
-3. Make sure your app has the `INTERNET` permission.
+The library is not published to Maven. You copy its one file into your app,
+and it is short enough to read in full, so you can also treat it as an
+example and adapt it.
 
-To update, replace the file with the newer one and read
-[CHANGELOG.md](CHANGELOG.md).
+1. Download
+   [`secondfactor/SecondFactor.kt`](https://raw.githubusercontent.com/secondfactor/secondfactor-kotlin/main/secondfactor/SecondFactor.kt)
+   into your app module's source tree. Keep the package `ai.secondfactor`, so
+   that updating means replacing the file. From your project's root:
+
+   ```bash
+   curl --create-dirs -o app/src/main/java/ai/secondfactor/SecondFactor.kt \
+     https://raw.githubusercontent.com/secondfactor/secondfactor-kotlin/main/secondfactor/SecondFactor.kt
+   ```
+
+2. Make sure your app has the `INTERNET` permission.
+
+The version is in the file's header. To update, download the file again and
+read [CHANGELOG.md](CHANGELOG.md).
 
 ## How it fits together
 
